@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>面向对象的程序设计（一） | 李慧敏</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、理解对象123456789var person = new Object();person.name = &amp;quot;Nicholas&amp;quot;;person.age= 29;person.job = &amp;quot;Software Engineer&amp;quot;;person.sayName = function()&amp;#123;alert(this.name);&amp;#125;;
+名为person">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象的程序设计（一）">
+<meta property="og:url" content="http://yoursite.com/2016/12/01/面向对象的程序设计（一）/index.html">
+<meta property="og:site_name" content="李慧敏">
+<meta property="og:description" content="一、理解对象123456789var person = new Object();person.name = &amp;quot;Nicholas&amp;quot;;person.age= 29;person.job = &amp;quot;Software Engineer&amp;quot;;person.sayName = function()&amp;#123;alert(this.name);&amp;#125;;
+名为person">
+<meta property="og:updated_time" content="2016-12-01T11:11:38.411Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面向对象的程序设计（一）">
+<meta name="twitter:description" content="一、理解对象123456789var person = new Object();person.name = &amp;quot;Nicholas&amp;quot;;person.age= 29;person.job = &amp;quot;Software Engineer&amp;quot;;person.sayName = function()&amp;#123;alert(this.name);&amp;#125;;
+名为person">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/assets/myphoto/pic.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">SunnyminLee</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">你是谁，便会遇见谁</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/前端/">前端</a></li>
+	        
+				<li><a href="/categories/随笔/">随笔</a></li>
+	        
+				<li><a href="/archives">时光轴</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">简历</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/SunnyminLee" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/SunnyminLee" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="douban" target="_blank" href="https://www.douban.com/people/SunnyminLee/" title="douban"><i class="icon-douban"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:809055274@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">SunnyminLee</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/assets/myphoto/pic.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">SunnyminLee</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">你是谁，便会遇见谁</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/categories/前端/">前端</a></li>
+		        
+					<li><a href="/categories/随笔/">随笔</a></li>
+		        
+					<li><a href="/archives">时光轴</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/SunnyminLee" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/SunnyminLee" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="douban" target="_blank" href="https://www.douban.com/people/SunnyminLee/" title="douban"><i class="icon-douban"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:809055274@qq.com" title="mail"><i class="icon-mail"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-面向对象的程序设计（一）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      面向对象的程序设计（一）
+    </h1>
+  
+
+        <a href="/2016/12/01/面向对象的程序设计（一）/" class="archive-article-date">
+  	<time datetime="2016-12-01T10:59:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-01</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、理解对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var person = new Object();</div><div class="line">person.name = &quot;Nicholas&quot;;</div><div class="line">person.age= 29;</div><div class="line">person.job = &quot;Software Engineer&quot;;</div><div class="line"></div><div class="line">person.sayName = function()&#123;</div><div class="line">alert(this.name);</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>名为person的对象，并为它添加了三个属性和一个方法。用字面量语法可以写成这样：<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var person =｛</div><div class="line">     name ： &quot;Nicholas&quot;;</div><div class="line">     age： 29;</div><div class="line">     job ： &quot;Software Engineer&quot;;</div><div class="line"></div><div class="line">    sayName ： function()&#123;</div><div class="line">         alert(this.name);</div><div class="line">    ｝</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>二、属性类型</p>
+<p>1、数据属性</p>
+<p>数据属性包含一个数据值的位置。在这个位置可以读取和写入值。数据属性有4个描述其行为的特性。</p>
+<p>■ [[Configurable]]:表示能否通过delete删除属性从而重新定义属性，能否修改属性的特性，或者能否把属性修改为访问其属性。特性默认的值为true。</p>
+<p>■ [[Enumerable]:表示能否通过for-in循环返回属性。默认值为true。</p>
+<p>■ [[Writable]]:表示能否修改属性的值。默认值true。</p>
+<p>■ [[Value]]:包含这个属性的数据值。读取属性值的时候，从这个位置读；写入属性值的时候，把新值保存在这个位置。默认值undefined。</p>
+<p>要修改属性默认的特性，必须使用ECMAScript5的Object/defineProperty()方法。这个方法接受三个参数：属性所在的对象、属性的名字和一个描述符对象。描述符对象的属性必须是：configurable、enumerable、writable、value。设置其中的一或多个值，可以修改对应的特性值。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var person = &#123;&#125;;</div><div class="line">object.defineProperty(person,&quot;name&quot;,&#123;</div><div class="line">writable: false,</div><div class="line">value: &quot;Nicholas&quot;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">alert(person.name);</div><div class="line">person.name = &quot;Grey&quot;;</div><div class="line">alert(person.name);</div></pre></td></tr></table></figure></p>
+<p>这个例子创建了一个name属性，只读。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var person = &#123;&#125;;</div><div class="line">object.defineProperty(person,&quot;name&quot;,&#123;</div><div class="line">configurable: false,</div><div class="line">value: &quot;Nicholas&quot;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">alert(person.name);</div><div class="line">person.name = &quot;Grey&quot;;</div><div class="line">alert(person.name);</div></pre></td></tr></table></figure></p>
+<p>configurable设置为false，表示不能从对像中删除谁许属性。一旦把属性定义为不可配置的，就不能再把它便会可配置了。此时，再调用Oject.defineProperty()方法修改除writable之外的特性，都会导致错误。</p>
+<p>可以多次调用Object.defineProperty（）方法修改同一个属性，但是把configurable特性设置为false之后就会有限制。</p>
+<p>2、访问器属性</p>
+<p>访问其属性不包含数据值：他们包含一对getter和setter函数（不是必需的）。在读取访问器属性时，调用getter函数。在写入访问器时，会调用settr函数并传入新值，这个函数负责决定如何处理数据。访问器属性有4个特性。</p>
+<p>■ [[Configurable]]:表示能否通过delete删除属性从而重新定义属性，能否把属性修改为数据属性。特性默认的值为true。</p>
+<p>■ [[Enumerable]]:表示能否通过for-in循环返回属性。默认值为true。</p>
+<p>■ [[Get]]:读取属性时调用的函数。默认值undefined。</p>
+<p>■ [[Set]]:写入属性时调用的函数。默认值undefined。</p>
+<p>访问器谁许诺过不能直接定义，必须使用Object.defineProperty()来定义。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var book = &#123;</div><div class="line">  _year:2004,</div><div class="line">edition:1</div><div class="line">&#125;;</div><div class="line"></div><div class="line">Object.defineProperty(book,&quot;year&quot;,&#123;</div><div class="line">get:function()&#123;</div><div class="line">return this._year;</div><div class="line">&#125;,</div><div class="line">set:function(newValue)&#123;</div><div class="line">if(newVlue&gt;2004)&#123;</div><div class="line">this._year = newVlue;</div><div class="line">this.edition+=newVlue- 2004;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;);</div><div class="line">book.year=2005;</div><div class="line">alert(book.edition);</div></pre></td></tr></table></figure></p>
+<p>_year前面的下划线是一种常见的记号，用于表示只能通过对象方法访问的属性。</p>
+<p>三、读取属性的特性</p>
+<p>Object.getOwnPropertyDescriptor()方法，可以取得给定属性的描述符。这个方法接受两个参数：属性所在的对象和要读取其描述符的属性名称。返回值是一个对象，如果是访问器属性，这个对象属性有configurable、enumerable、get和set；如果是数据属性，这个对象的属性有configurable、enumerable、writable和value。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var book= &#123;&#125;;</div><div class="line"></div><div class="line">Object.defineProperties(book,&#123;</div><div class="line">   _year:&#123;</div><div class="line">             value:2004</div><div class="line">           &#125;,</div><div class="line">   edition:&#123;</div><div class="line">               value:1</div><div class="line">           &#125;,</div><div class="line"></div><div class="line">   year:&#123;</div><div class="line">                get:function()&#123;</div><div class="line">                       return this._year;</div><div class="line">                &#125;,</div><div class="line">         </div><div class="line">               set:function(newValue)&#123;</div><div class="line">                      if (newValue &gt; 2004) &#123;</div><div class="line">                           this._year = newValue;</div><div class="line">                           this.edition +=newValue - 2004;</div><div class="line">                      &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">var descriptor = Object.getOwnPropertyDescriptor(book,&quot;_year&quot;);</div><div class="line">alert(descriptor.value);  //2004</div><div class="line">alert(descriptor.configurable);//false</div><div class="line">alert(typeof descriptor.get);  //&quot;undefined&quot;</div><div class="line"></div><div class="line">var descriptor = Object.getOwnPropertyDescriptor(book,&quot;year&quot;);</div><div class="line">alert(descriptor.value);  //undefined</div><div class="line">alert(descriptor.enumerable);//false</div><div class="line">alert(typeof descriptor.get);  //&quot;function&quot;</div></pre></td></tr></table></figure></p>
+<p>对于数据属性_year，value等于最初值，configurable是false，get等于undefined；</p>
+<p>对于访问器属性year，value等于undefined，enumerable是false，get是一个指向getter函数指针。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-calendar"></i>
+	<a class="article-category-link" href="/categories/前端/">前端</a>
+	</div>
+
+
+      
+
+      
+        <div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode"></div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/12/01/有关吵架/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于吵架</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 SunnyminLee
+    	</div>
+      	<div class="footer-right">
+      		<a>李慧敏的个人博客</a>  by SunnyminLee
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/微文/" style="font-size: 10px;">微文</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">个人简历</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br&gt; &lt;br&gt; SunnyminLee, &lt;br&gt; 毕业于武汉文华学院 &lt;br&gt; (原华中科技大学文华学院) &lt;br&gt; &lt;br&gt; &lt;br&gt; 乐观 幽默 &lt;br&gt; 有着你意想不到的远大理想 &lt;br&gt; &lt;br&gt; &lt;br&gt; 做更好的自己，遇见更好的你！</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
